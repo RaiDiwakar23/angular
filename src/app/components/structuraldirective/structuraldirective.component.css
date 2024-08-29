@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  gap: 20px;
+  background-color: papayawhip;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}

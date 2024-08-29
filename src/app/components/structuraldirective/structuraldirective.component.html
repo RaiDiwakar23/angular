@@ -1,0 +1,236 @@
+<!--
+-> Component directives(@Component, @Pipe, @Input, @Output)
+-> Structural directive(To change the structure fo the html)
+-> Attribute directive(To dynamically change the class and style attribute)
+-->
+
+<!--
+the basic difference between the control flow statements and the structural directives is that we do not need common Module for the control flow statements to work-->
+
+<h1>STRUCTURAL DIRECTIVE</h1>
+
+<!-- <button (mouseenter)="showElement()" (mouseout)="hideElement()">show</button>
+<button (click)="hideElement()">hide</button>
+<button (click)="toggle()">Toggle</button> -->
+
+<!-- <div class="container" *ngIf="showBlock">
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1723398466717-12d0c8f6299c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam dolore
+      excepturi possimus ab blanditiis quam iusto cupiditate voluptates, quis
+      voluptas illo earum, eos eum ipsum. Voluptate velit dicta quibusdam.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+      repudiandae neque vero eaque deserunt blanditiis odit a beatae ipsum
+      tenetur doloremque similique fugiat voluptatibus nulla amet illo
+      quibusdam, veniam inventore.
+    </p>
+  </div>
+</div> -->
+
+<!-- @if(showBlock){
+<div class="container">
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1723398466717-12d0c8f6299c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam dolore
+      excepturi possimus ab blanditiis quam iusto cupiditate voluptates, quis
+      voluptas illo earum, eos eum ipsum. Voluptate velit dicta quibusdam.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+      repudiandae neque vero eaque deserunt blanditiis odit a beatae ipsum
+      tenetur doloremque similique fugiat voluptatibus nulla amet illo
+      quibusdam, veniam inventore.
+    </p>
+  </div>
+</div>
+} -->
+
+<!-- <p>Select a state</p>
+<select name="" id="" [(ngModel)]="state">
+  <option value="ka">Karnataka</option>
+  <option value="ts">Telangana</option>
+  <option value="hr">Haryana</option>
+</select> -->
+
+<!-- <div class="container" *ngIf="state == 'ka'">
+  <h1>Karnataka</h1>
+  <div>
+    <img
+      src="https://plus.unsplash.com/premium_photo-1697730504977-26847b1f1f91?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2FybmF0YWthfGVufDB8fDB8fHww"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      aperiam nihil sit ab repellendus eius accusamus dolorum harum, laudantium
+      exercitationem ipsam quam voluptas! Reprehenderit similique quae nisi,
+      harum id architecto deserunt illum alias dolorum eum! Placeat,
+      reprehenderit cupiditate quia omnis nulla, voluptatem perspiciatis
+      repudiandae laudantium corrupti iusto totam cumque! Consectetur.
+    </p>
+  </div>
+</div>
+
+<div class="container" *ngIf="state == 'ts'">
+  <h1>Telangana</h1>
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1707832904026-9846170578c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVsYW5nYW5hfGVufDB8fDB8fHww"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      aperiam nihil sit ab repellendus eius accusamus dolorum harum, laudantium
+      exercitationem ipsam quam voluptas! Reprehenderit similique quae nisi,
+      harum id architecto deserunt illum alias dolorum eum! Placeat,
+      reprehenderit cupiditate quia omnis nulla, voluptatem perspiciatis
+      repudiandae laudantium corrupti iusto totam cumque! Consectetur.
+    </p>
+  </div>
+</div>
+
+<div class="container" *ngIf="state == 'hr'">
+  <h1>Haryana</h1>
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1605469237567-a39930679526?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SGFyeWFuYXxlbnwwfHwwfHx8MA%3D%3D"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      aperiam nihil sit ab repellendus eius accusamus dolorum harum, laudantium
+      exercitationem ipsam quam voluptas! Reprehenderit similique quae nisi,
+      harum id architecto deserunt illum alias dolorum eum! Placeat,
+      reprehenderit cupiditate quia omnis nulla, voluptatem perspiciatis
+      repudiandae laudantium corrupti iusto totam cumque! Consectetur.
+    </p>
+  </div>
+</div> -->
+
+<!-- Using control statements -->
+
+<!-- @if(state == "ka"){
+<div class="container">
+  <h1>Karnataka</h1>
+  <div>
+    <img
+      src="https://plus.unsplash.com/premium_photo-1697730504977-26847b1f1f91?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2FybmF0YWthfGVufDB8fDB8fHww"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      aperiam nihil sit ab repellendus eius accusamus dolorum harum, laudantium
+      exercitationem ipsam quam voluptas! Reprehenderit similique quae nisi,
+      harum id architecto deserunt illum alias dolorum eum! Placeat,
+      reprehenderit cupiditate quia omnis nulla, voluptatem perspiciatis
+      repudiandae laudantium corrupti iusto totam cumque! Consectetur.
+    </p>
+  </div>
+</div>
+} @else if(state == 'ts'){
+<div class="container">
+  <h1>Telangana</h1>
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1707832904026-9846170578c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVsYW5nYW5hfGVufDB8fDB8fHww"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      aperiam nihil sit ab repellendus eius accusamus dolorum harum, laudantium
+      exercitationem ipsam quam voluptas! Reprehenderit similique quae nisi,
+      harum id architecto deserunt illum alias dolorum eum! Placeat,
+      reprehenderit cupiditate quia omnis nulla, voluptatem perspiciatis
+      repudiandae laudantium corrupti iusto totam cumque! Consectetur.
+    </p>
+  </div>
+</div>
+}@else if(state == "hr") {
+<div class="container">
+  <h1>Haryana</h1>
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1605469237567-a39930679526?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SGFyeWFuYXxlbnwwfHwwfHx8MA%3D%3D"
+      alt=""
+    />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      aperiam nihil sit ab repellendus eius accusamus dolorum harum, laudantium
+      exercitationem ipsam quam voluptas! Reprehenderit similique quae nisi,
+      harum id architecto deserunt illum alias dolorum eum! Placeat,
+      reprehenderit cupiditate quia omnis nulla, voluptatem perspiciatis
+      repudiandae laudantium corrupti iusto totam cumque! Consectetur.
+    </p>
+  </div>
+</div>
+}@else{
+<div class="container">No state choosen</div>
+} -->
+
+<!-- ngSwitch -->
+
+<select name="" id="" [(ngModel)]="dayNo">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+</select>
+
+<!-- <div [ngSwitch]="dayNo">
+  <div class="container" *ngSwitchCase="'1'">Monday</div>
+  <div class="container" *ngSwitchCase="'2'">Tuesday</div>
+  <div class="container" *ngSwitchCase="'3'">Wednesday</div>
+  <div class="container" *ngSwitchCase="'4'">Thursday</div>
+  <div class="container" *ngSwitchCase="'5'">Friday</div>
+  <div class="container" *ngSwitchCase="'6'">Saturday</div>
+  <div class="container" *ngSwitchCase="'7'">Sunday</div>
+  <div class="container" *ngSwitchDefault>Holiday</div>
+</div> -->
+
+@switch (dayNo) { @case("1"){
+<div class="container">Monday</div>
+} @case("2"){
+<div class="container">Tuesday</div>
+} @case("3"){
+<div class="container">Wednesday</div>
+} @case("4"){
+<div class="container">Thurday</div>
+} @case("5"){
+<div class="container">Friday</div>
+} @case("6"){
+<div class="container">Saturday</div>
+} @case("7"){
+<div class="container">Sunday</div>
+} @default{
+<div class="container">Holiday</div>
+} }

@@ -1,0 +1,91 @@
+<!-- <h1>2 + 2</h1>
+
+<h1>{{ 2 + 2 }}</h1>
+
+<h1>{{ name }}</h1>
+
+<h3>{{ displayGreeting() }}</h3> -->
+
+<!-- 
+use interpolation for displaying normal text in the ui -->
+<!-- 
+use property binding for displaying data related to the attributes of the element. use property binding for class, value, type
+-->
+
+<!-- 
+mouse events - click, dbclick, mouseover, mouseenter, mouseleave
+
+keyboad event - keyup, keydown, keypress
+
+form events - submit , change, blur , focus
+-->
+
+<!-- <div class="container">
+  <h2>One way data binding - Interpolation</h2>
+  <p>Name: {{ name }}</p>
+  <p>Age: {{ age }}</p>
+  <p>student/graduate: {{ isStudent ? "Student" : "Graduate" }}</p>
+  <hr />
+  <h3>Address</h3>
+  <p>city: {{ address.city }}</p>
+  <p>Door No: {{ address.doorNo }}</p>
+  <p>Gender</p>
+  <input type="{{ genderType }}" />male <input type="{{ genderType }}" />female
+
+  <p>Enter your hobby</p>
+  <input type="text" value="{{ hobby }}" /> {{ hobby }}
+  <img src="{{ imageSource }}" alt="" height="100" width="70" />
+</div> -->
+
+<!-- <div class="container">
+  <h2>One way data binding - Property Binding</h2>
+
+  <p>Name: <span [textContent]="name"></span></p>
+  <p>Age: <span [textContent]="age"></span></p>
+  <img [src]="imageSource" alt="" height="100" [width]="imageWidth" />
+
+  <p>Select gender</p>
+  <input [type]="genderType" /> male <input [type]="genderType" /> female
+
+  <p>Enter your hobby</p>
+  <input type="text" [value]="hobby" (keyup)="handleKeyUp()" />
+
+  <p class="" [class.hiddenpara]="displayPara">
+    I have to display this paragraph conditionally
+  </p>
+
+  <button (click)="handleClick()">clickMe</button>
+</div> -->
+
+<!-- https://codeshare.io/0bQQJe  -->
+
+<!-- 
+Data binding
+
+One Way data binding
+  from ts(component) to view(html)
+    interpolation {{value}}
+    property binding []="property" -> directly it work with the dom property of the element
+
+  from html(view) to ts(component)
+    eventBinding (eventType)=""
+
+Two way data binding
+  both ts and html together
+  [(ngModel)]
+
+-->
+<!-- 
+<h1>{{ employeeName }}</h1>
+
+<input type="{{ inputType }}" />interpolation
+
+<input [type]="inputType" />propertybinding
+
+<button (click)="showName()">clickMe</button> -->
+
+<input type="text" [value]="student" /> {{ student }}<br />
+
+<input type="text" [(ngModel)]="employeeName" /> {{ employeeName }}
+
+<!-- input -> {type: "checkbox", placeholder: "Enter your name"} -->

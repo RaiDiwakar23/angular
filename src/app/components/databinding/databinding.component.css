@@ -1,0 +1,11 @@
+.container {
+  background-color: papayawhip;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+
+.hiddenpara {
+  display: none;
+}

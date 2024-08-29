@@ -1,0 +1,7 @@
+<h1>Two way data binding</h1>
+<input type="text" [(ngModel)]="newName" />{{ newName }}
+<button (click)="changePerson()">Change Person</button>
+
+<h1>One Way data binding</h1>
+
+<input type="text" [value]="name" /> {{ name }}
