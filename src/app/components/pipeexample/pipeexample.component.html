@@ -1,0 +1,23 @@
+<h1>Inbuilt Pipes</h1>
+{{ name | uppercase }}
+{{ anotherName | lowercase }}
+
+<p>Price: {{ price | currency }}</p>
+<p>Price: {{ price | currency : "INR" }}</p>
+<p>Price: {{ price | currency : "AUD" }}</p>
+<p>date: {{ date | date }}</p>
+<p>date: {{ date | date : "dd/MM/yyyy" }}</p>
+<p>date: {{ date | date : "dd-MM-yyyy" }}</p>
+<p>date: {{ date | date : "dd-MM-yy" }}</p>
+<p>date: {{ date | date : "dd MMM" }}</p>
+
+<div>
+  {{ student | json }}
+</div>
+
+<div>
+  <p>name: {{ student.name | notAtAllApplicable }}</p>
+  <p>address: {{ student.address | notAtAllApplicable }}</p>
+  <p>doorNo: {{ student.doorNo | notAtAllApplicable }}</p>
+  <p>hobby: {{ student.hobby | notAtAllApplicable }}</p>
+</div>
