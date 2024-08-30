@@ -1,12 +1,36 @@
 .container {
   display: flex;
   gap: 20px;
-  background-color: papayawhip;
+  flex-wrap: wrap;
+  /* background-color: papayawhip; */
   padding: 10px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 img {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 60px;
+}
+
+.card {
+  width: 30%;
+  padding: 10px;
+  box-shadow: 2px 2px 5px lightgray;
+  border-radius: 5px;
+}
+
+.bgblue {
+  background-color: blue;
+}
+
+.bgred {
+  background-color: red;
+}
+
+.textwhite {
+  color: white;
+}
+
+.bg-yellow {
+  background-color: yellow;
 }

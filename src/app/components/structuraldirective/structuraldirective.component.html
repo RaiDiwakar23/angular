@@ -196,7 +196,7 @@ the basic difference between the control flow statements and the structural dire
 
 <!-- ngSwitch -->
 
-<select name="" id="" [(ngModel)]="dayNo">
+<!-- <select name="" id="" [(ngModel)]="dayNo">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -204,7 +204,7 @@ the basic difference between the control flow statements and the structural dire
   <option value="5">5</option>
   <option value="6">6</option>
   <option value="7">7</option>
-</select>
+</select> -->
 
 <!-- <div [ngSwitch]="dayNo">
   <div class="container" *ngSwitchCase="'1'">Monday</div>
@@ -217,7 +217,7 @@ the basic difference between the control flow statements and the structural dire
   <div class="container" *ngSwitchDefault>Holiday</div>
 </div> -->
 
-@switch (dayNo) { @case("1"){
+<!-- @switch (dayNo) { @case("1"){
 <div class="container">Monday</div>
 } @case("2"){
 <div class="container">Tuesday</div>
@@ -233,4 +233,97 @@ the basic difference between the control flow statements and the structural dire
 <div class="container">Sunday</div>
 } @default{
 <div class="container">Holiday</div>
-} }
+} } -->
+
+<!-- ngFor Directive -->
+
+<h1>List of All Student</h1>
+
+<!-- <ul>
+  <li *ngFor="let cityName of cityList">{{ cityName }}</li>
+</ul> -->
+
+<!-- <section class="container">
+  <div class="card" *ngFor="let student of studentData">
+    <img [src]="student.imgsource" alt="" />
+    <h3>{{ student.name }}</h3>
+    <p>Age: {{ student.age }}</p>
+    <p>isGraduate: {{ student.isgraduate ? "Yes" : "No" }}</p>
+  </div>
+</section> -->
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Sl no</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Graduate</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let student of studentData; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.isgraduate ? "Graduate" : "Under graduate" }}</td>
+      <td>
+        <img [src]="student.imgsource" alt="" />
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+<!-- 
+<ul>
+  <li *ngFor="let con of countries; let i = index">{{ i }} {{ con }}</li>
+</ul> -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Sl no</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Graduate</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(student of studentData; track $index){
+    <tr [ngClass]="student.age < 32 ? 'bg-yellow' : ''">
+      <td>{{ $index + 1 }}</td>
+      <td [ngStyle]="{ color: student.name == 'Rohit Sharma' ? 'red' : '' }">
+        {{ student.name }}
+      </td>
+      <td>{{ student.age }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+<!-- <ul>
+  @for(countryName of countries; track countryName){
+  <li>{{ countryName }}</li>
+  }
+</ul>
+
+<section>@for(student of studentData; track student.name){ }</section> -->
+
+<!--Code for attribute directive starts here-->
+<!--[ngClass]-->
+<!-- <section [ngClass]="isred ? 'bgred textwhite' : ''">This is a section</section> -->
+
+<!-- [ngStyle] -->
+<section
+  [ngStyle]="
+    isred
+      ? { background: 'red', border: '1px solid green' }
+      : { background: 'yellow' }
+  "
+>
+  this is a section to demonstrate ngStyle
+</section>
+
+<button (click)="changeBg()">ClickMe</button>
