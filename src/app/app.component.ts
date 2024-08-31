@@ -4,11 +4,12 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
 import { StructuraldirectiveComponent } from './components/structuraldirective/structuraldirective.component';
 import { PipeexampleComponent } from './components/pipeexample/pipeexample.component';
 import { TemplateformComponent } from './components/templateform/templateform.component';
+import { ReactiveformComponent } from './components/reactiveform/reactiveform.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TemplateformComponent],
+  imports: [RouterOutlet, ReactiveformComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

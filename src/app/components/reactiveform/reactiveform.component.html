@@ -1,0 +1,22 @@
+<form [formGroup]="myForm" (ngSubmit)="handleSubmit()">
+  <h1>Login Form</h1>
+  <div>
+    <label for="uname">User Name</label>
+    <input type="text" id="uname" formControlName="username" />
+    @if(myForm.controls?.['username']?.errors?.['required']){
+    <p class="error">username is required</p>
+    }
+  </div>
+  <div>
+    <label for="pass">Password</label>
+    <input type="text" id="pass" formControlName="password" />
+  </div>
+  <div class="checkDiv">
+    <input type="checkbox" id="check" /><label for="check"
+      >Keep me logged In</label
+    >
+  </div>
+  <div>
+    <button type="submit" [disabled]="myForm.invalid">LOGIN</button>
+  </div>
+</form>
