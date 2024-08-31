@@ -1,0 +1,50 @@
+form {
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 7px;
+  padding: 20px;
+  width: 50%;
+}
+
+form h1 {
+  text-align: center;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+}
+
+form div {
+  margin: 20px;
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+}
+
+form div.checkDiv label {
+  display: inline;
+}
+
+.checkDiv input {
+  width: 10%;
+  height: 10px;
+}
+
+form button {
+  width: 100%;
+  background-color: royalblue;
+  border: none;
+  height: 30px;
+  color: white;
+}
+
+.error {
+  color: red;
+}
+
+form button:disabled {
+  background-color: gray;
+}

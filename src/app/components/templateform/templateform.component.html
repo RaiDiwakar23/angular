@@ -1,0 +1,58 @@
+<!-- In template driven forms we must give a name attribute to each input fields -->
+
+<form #ourForm="ngForm" (ngSubmit)="handleSubmit(ourForm)">
+  <h1>Login Form</h1>
+  <div>
+    <label for="uname">User Name</label>
+    <input
+      type="text"
+      id="uname"
+      name="username"
+      [(ngModel)]="loginDetails.username"
+      required
+      minlength="4"
+      #username="ngModel"
+    />
+
+    <!-- Optional chaining: Whenever we try to access property from any data type other than objects, it will give us undefined so we use optional chaining to make sure that error or unwanted data in not received -->
+
+    @if((username.errors?.["touched"] || username.errors?.["dirty"]) &&
+    username.errors?.["required"]){
+    <p class="error">username is required</p>
+    }@else if(username.errors?.['minlength']){
+    <p class="error">username must have 4 characters</p>
+    }
+
+    <!-- {{ username.errors | json }} -->
+  </div>
+  <div>
+    <label for="pass">Password</label>
+    <input
+      type="text"
+      id="pass"
+      name="password"
+      [(ngModel)]="loginDetails.password"
+      #password="ngModel"
+      minlength="6"
+      required
+    />
+
+    @if(password.errors?.["minlength"]){
+    <p class="error">Password must be 6 characters</p>
+
+    }
+  </div>
+  <div class="checkDiv">
+    <input
+      type="checkbox"
+      id="check"
+      name="isChecked"
+      [(ngModel)]="loginDetails.isChecked"
+    /><label for="check">Keep me logged In</label>
+  </div>
+  <div>
+    <button type="submit" [disabled]="ourForm.invalid">LOGIN</button>
+  </div>
+</form>
+
+{{ ourForm.invalid | json }}
