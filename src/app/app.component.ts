@@ -5,11 +5,12 @@ import { StructuraldirectiveComponent } from './components/structuraldirective/s
 import { PipeexampleComponent } from './components/pipeexample/pipeexample.component';
 import { TemplateformComponent } from './components/templateform/templateform.component';
 import { ReactiveformComponent } from './components/reactiveform/reactiveform.component';
+import { ObjservableComponent } from './components/objservable/objservable.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ReactiveformComponent],
+  imports: [RouterOutlet, ObjservableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
