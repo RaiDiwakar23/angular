@@ -1,11 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Observable } from 'rxjs';
+import { GithubserviceService } from '../../services/githubservice.service';
 
 @Component({
   selector: 'app-objservable',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './objservable.component.html',
   styleUrl: './objservable.component.css',
 })
@@ -44,20 +46,44 @@ export class ObjservableComponent {
   //!Step 5: Subscripe to the request
   //!Step 6: handle the success condition and the error condition
 
-  constructor(private apiCaller: HttpClient) {}
+  // constructor(private apiCaller: HttpClient) {}
 
-  handleFetchData() {
-    this.apiCaller.get('https://api.github.com/users').subscribe(
-      (res: any) => {
-        console.log(res);
-      },
-      (error) => {
-        if (error.statuscode == 404) {
-          alert('data not found');
-        } else if (error.statuscode == 500) {
-          alert('Some issue with the server');
-        }
-      }
-    );
+  //! DRY --> DONOT REPEAT YOURSELF
+
+  githubData: any = [];
+  cityArr: any = [];
+  // apiCaller = inject(HttpClient); // introduced in angular 16
+
+  ngOnInit() {
+    this.handledata();
+  }
+
+  constructor(private myService: GithubserviceService) {}
+
+  // handleFetchData() {
+  //   this.apiCaller.get('https://api.github.com/users').subscribe(
+  //     (res: any) => {
+  //       console.log(res);
+  //       this.githubData = res;
+  //     },
+  //     (error) => {
+  //       if (error.statuscode == 404) {
+  //         alert('data not found');
+  //       } else if (error.statuscode == 500) {
+  //         alert('Some issue with the server');
+  //       }
+  //     }
+  //   );
+  // }
+
+  getArrayList() {
+    this.cityArr = this.myService.serviceForCityList();
+    console.log(this.cityArr);
+  }
+
+  handledata() {
+    this.myService.fetchedData().subscribe((res: any) => {
+      this.githubData = res;
+    });
   }
 }
